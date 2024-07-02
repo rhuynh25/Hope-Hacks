@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Health Hacks</title>
+    <link rel="stylesheet" href="index.styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Health Hacks</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="health-insurance.html">Health Insurance</a>
+                <a href="login.html">Login</a>
+            </nav>
+            <div class="hamburger">
+                <img src="static.png" alt="Menu">
+            </div>
+        </header>
+        <main>
+            <div class="hero">
+                <h2>Welcome to Health Hacks</h2>
+                <p>Your trusted platform for finding the best health care options near you.</p>
+                <a href="about.html" class="btn">Learn More</a>
+                <img src="doctor-healthcare.webp" alt="Healthcare">
+            </div>
+            <div class="content">
+                <div class="content-box">
+                    <h3>About Us</h3>
+                    <p>Learn more about our mission and the team behind Health Hacks.</p>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+                <div class="content-box">
+                    <h3>Contact</h3>
+                    <p>Get in touch with us for any questions or support.</p>
+                    <a href="contact.html" class="btn">Learn More</a>
+                </div>
+                <div class="content-box">
+                    <h3>Health Insurance</h3>
+                    <p>Find the best health insurance options available to you.</p>
+                    <a href="health-insurance.html" class="btn">Learn More</a>
+                </div>
+                <div class="content-box">
+                    <h3>Login/Register</h3>
+                    <p>Access your account or create a new one to get started.</p>
+                    <a href="login.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Health Hacks</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('header nav');
+
+            hamburger.addEventListener('click', function () {
+                nav.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
