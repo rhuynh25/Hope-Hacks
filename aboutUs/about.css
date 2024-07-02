@@ -1,0 +1,127 @@
+/* Base styles for desktop */
+.hero-image {
+    background-image: url('images/HHAboutUSHero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 65vh;
+    position: relative; 
+    box-shadow: 10px 10px 10px #666;
+}
+
+.hero-text {
+    position: absolute; 
+    bottom: 20px; 
+    left: 20px; 
+    font-size: 4rem;
+    color: white;
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    animation: slideInFromLeft 3s ease-out;
+}
+
+.title {
+    font-size: 8rem;
+    text-align: left;
+    animation: slideInFromLeft 3s ease-out;
+}
+
+.round-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 50px; 
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s;
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    opacity: 90%;
+}
+
+.round-button:hover {
+    background-color:  #003f7f;
+    opacity: 75%;
+}
+
+h1 {
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+    font-size: 6rem;
+    color: #4a90e2;
+    animation: slideInFromLeft 3s ease-out;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+    .hero-image {
+        height: 80vh;
+    }
+
+    .title {
+        font-size: 6rem;
+    }
+
+    .hero-text {
+        font-size: 3rem;
+        animation: slideInFromLeft 3s ease-out;
+    }
+
+    .round-button {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .hero-image {
+        height: 60vh;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        animation: slideInFromLeft 3s ease-out;
+    }
+
+    .round-button {
+        font-size: .5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        animation: slideInFromLeft 3s ease-out;
+    }
+}
+
