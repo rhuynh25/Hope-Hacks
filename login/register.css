@@ -1,0 +1,360 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+a,
+form,
+input,
+select,
+button,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4A90E2, #003F7F);
+    border-bottom: 2px solid #003F7F;
+    transform: skew(-20deg);
+    margin: 20px;
+    opacity: 0.85;
+    box-shadow: 10px 10px 10px #666;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transform: skew(20deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transform: skew(20deg);
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #FFCC00;
+}
+
+.nav-links::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #007AFF);
+    bottom: -10px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-links:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transform: skew(20deg);
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+
+
+/* Set background and text color */
+body {
+    background-color: #E7ECEF; 
+    color: #333; 
+}
+
+
+
+/* Container to center the content and add spacing */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* Header styles */
+header {
+    background-color: #4A90E2; 
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav.open {
+    display: flex;
+}
+
+header nav a {
+    color: white; 
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+header .hamburger img {
+    width: 25px;
+    height: auto;
+}
+
+
+
+/* Main content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+.form-container {
+    display: flex;
+    background-color: #fff; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-section,
+.info-section {
+    padding: 2em;
+    width: 50%;
+}
+
+.form-section h2,
+.info-section h2 {
+    margin-bottom: 1em;
+    color: #274C77; 
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #274C77; 
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6096BA; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(96, 150, 186, 0.5);
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #A3CEF1; 
+}
+
+.btn {
+    background-color: #007AFF; 
+    color: white; 
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #005BB5;
+}
+
+
+
+/* Info section styles */
+.info-section {
+    background-color: #A3CEF1; 
+    color: #274C77; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.info-section .testimonial {
+    margin-top: 2em;
+    background-color: #E7ECEF; 
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+}
+
+.info-section .testimonial p {
+    margin-bottom: 0.5em;
+    color: #274C77; 
+}
+
+.info-section .testimonial strong {
+    display: block;
+    margin-top: 1em;
+    color: #274C77; 
+}
+
+
+
+/* Footer styles */
+footer {
+    display: fixed;
+    margin-top: auto;
+    background-color: #003F7F;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+}
+.social-icons {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.social-icons i {
+    color: white;
+    font-size: 2rem;
+    margin: 25px;
+}
+.social-icons i:hover {
+    transform: scale(1.5);
+    background-color: white;
+    color: #274C77;
+    border-radius: 50%;
+    padding: 3px;
+  }
+.pages {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.pages a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: large;
+}
+.pages a:hover {
+    transform: scale(1.5);
+}
+.copyright {
+    color: white;
+    font-size: large;
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        background-color: #4A90E2; 
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+    }
+
+    header nav a {
+        margin: 1em 0;
+        text-align: center;
+    }
+
+    header .hamburger {
+        display: flex;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-section,
+    .info-section {
+        width: 100%;
+        padding: 1em;
+    }
+}
