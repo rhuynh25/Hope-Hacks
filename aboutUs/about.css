@@ -1,0 +1,236 @@
+/* styling for desktop */
+.hero-image {
+    background-image: url('images/HHAboutUSHero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 65vh;
+    position: relative; 
+    box-shadow: 10px 10px 10px #666;
+    display: flex;
+    align-items: flex-end; 
+    padding: 20px;
+}
+
+.hero-text {
+    font-size: 4rem;
+    color: white;
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    animation: slideInFromLeft 3s ease-out;
+}
+
+.title {
+    font-size: 8rem;
+    text-align: left;
+    animation: slideInFromLeft 3s ease-out;
+}
+
+.round-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 50px; 
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s;
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    opacity: 90%;
+}
+
+.round-button:hover {
+    background-color:  #003f7f;
+    opacity: 75%;
+}
+
+h1 {
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: center;
+    font-size: 8rem;
+    color: #4a90e2;
+    opacity: 85%;
+    animation: slideInFromLeft 3s ease-out;
+}
+
+/* .slider-wrapper {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    animation: slideInFromLeft 3s ease-out;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    transition: transform 0.5s ease;
+    padding: 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.slide-title {
+    font-size: 1.5em;
+    margin: 10px 0 5px;
+}
+
+.slide-description {
+    font-size: 1em;
+    color: #666;
+} */
+
+.slider-wrapper {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden; 
+    animation: slideInFromLeft 3s ease-out;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%; 
+    transition: transform 0.5s ease;
+    padding: 5%; 
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+.slide img {
+    max-width: 80%; 
+    max-height: 40vh; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px; 
+}
+
+.slide-title {
+    font-size: 2rem;
+    margin: 10px 0 5px;
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    opacity: 85%;
+    color: #4a90e2;
+}
+
+.slide-description {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 10%; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* tablet devices */
+@media (max-width: 768px) {
+    .hero-image {
+        height: 80vh;
+        position: relative; 
+    }
+
+    .title {
+        font-size: 6rem;
+    }
+
+    .hero-text {
+        font-size: 3rem;
+        animation: slideInFromLeft 3s ease-out;
+        position: absolute; 
+        bottom: 0; 
+        left: 0; 
+        margin: 0.5rem; 
+    }
+
+    .round-button {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+/* mobile devices */
+@media (max-width: 480px) {
+    .hero-image {
+        height: 60vh;
+        position: relative; 
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        animation: slideInFromLeft 3s ease-out;
+        position: absolute; 
+        bottom: 10px; 
+        left: 10px; 
+    }
+
+    .round-button {
+        font-size: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        animation: slideInFromLeft 3s ease-out;
+    }
+}
+
+
