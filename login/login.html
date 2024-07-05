@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">HH</div>
+        <ul class="nav-links">
+            <li><a href="/home/index.html">Home</a></li>
+            <li><a href="/aboutUs/about.html">About Us</a></li>
+            <li><a href="/contact/contact.html">Contact</a></li>
+            <li><a href="/login/login.html">Login</a></li>
+            <li><a href="/service/service.html">Services</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <form class="login-form">
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="login" class="login-button">Login</button>
+
+            <div class="login-link">
+                <div class="register-text">
+                    <p>Don't have an account? <a href="register.html">Register here</a></p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo-container">
+                <img src="/contact/logo.png" alt="Hope Hacks Logo" id="logo" style="width: 200px; height:auto"/>
+            </div>
+            <!-- Social Media Links -->
+            <div class="social-icons">
+                    <a href="www.facebook.com" aria-label="Go to shop's facebook page."><i class="fa-brands fa-facebook"></i></a>
+                    <a href="www.instagram.com" aria-label="Go to shop's instagram page."><i class="fa-brands fa-instagram"></i></a>
+                    <a href="www.tiktok.com" aria-label="Go to shop's tiktok page."><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <!-- Pages Links -->
+            <div class="pages">
+                <a href="/home/index.html">Home</a>
+                <a href="/service/service.html">Services</a>
+                <a href="/aboutUs/about.html">About</a>
+                <a href="/contact/contact.html">Contact</a>
+                <a href="/login/login.html">Login</a>
+            </div>
+            <div class="copyright">
+                <p class="copyright">Hope Hacks &copy;2023</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>
+

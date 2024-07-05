@@ -1,0 +1,256 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+a,
+form,
+input,
+select,
+button,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4A90E2, #003F7F);
+    border-bottom: 2px solid #003F7F;
+    transform: skew(-20deg);
+    margin: 20px;
+    opacity: 0.85;
+    box-shadow: 10px 10px 10px #666;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transform: skew(20deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transform: skew(20deg);
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #FFCC00;
+}
+
+.nav-links::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #007AFF);
+    bottom: -10px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-links:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transform: skew(20deg);
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Form container styles */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin: 20px auto;
+}
+
+.user-info {
+    background: #A3CEF1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.user-info h2 {
+    text-align: center;
+    color: #003F7F;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.user-info p {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Footer styles */
+footer {
+    display: fixed;
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    background: linear-gradient(135deg, #4A90E2, #007AFF, #005BB5, #003F7F
+);
+}
+.social-icons {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.social-icons i {
+    color: #BFC1BB;
+    font-size: 2rem;
+    margin: 25px;
+}
+.social-icons i:hover {
+    transform: scale(1.5);
+    background-color: #BFC1BB;
+    color: #051C2D;
+    border-radius: 50%;
+    padding: 3px;
+  }
+.pages {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.pages a {
+    text-decoration: none;
+    color: #BFC1BB;
+    margin: 10px;
+    font-size: large;
+}
+.pages a:hover {
+    transform: scale(1.5);
+}
+.copyright {
+    color: #BFC1BB;
+    font-size: large;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 768px){
+.pages {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin: 30px auto;
+    width: 70%;
+}
+.social-icons {
+    width: 50%;
+    margin: 30px auto;
+}
+.social-icons i {
+    color: #BFC1BB;
+    font-size: 2.2rem;
+    margin: 25px;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 45% 45% 10%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+.logo-container {
+    grid-area: 1 / 1 / 4 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 3px solid #BFC1BB;
+}
+.social-icons { grid-area: 1 / 2 / 2 / 3; }
+.pages { grid-area: 2 / 2 / 3 / 3; }
+.copyright { grid-area: 3 / 2 / 4 / 3; }
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        transform: skew(20deg);
+        margin-right: 0;
+        text-align: center;
+        opacity: 0.85;
+        background: linear-gradient(135deg, #4A90E2, #003F7F);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a:hover {
+        color: #FFCC00;
+    }
+
+    .nav-links::after {
+        height: 1px;
+        bottom: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
