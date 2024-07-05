@@ -12,10 +12,13 @@
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
     transform: skew(20deg);
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    border-radius: 20%;
 }
 
 .nav-links {
@@ -23,9 +26,12 @@
     display: flex;
     gap: 20px;
     transform: skew(20deg);
-    font-family: Arial, sans-serif;
-    color: white;
-    font-size: 20px;
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 2rem;
 }
 
 .nav-links li {
@@ -35,7 +41,7 @@
 .nav-links a {
     text-decoration: none;
     transition: color 0.3s;
-    color: white;
+    color: #F8EED7;
 }
 
 .nav-links a:hover {
@@ -57,20 +63,43 @@
     width: 100%;
 }
 
-/* Hamburger menu styles */
 .hamburger {
-    display: none;
+    display: none; 
     flex-direction: column;
     cursor: pointer;
     transform: skew(20deg);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; 
 }
 
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #F8EED7;
     margin: 4px 0;
     transition: 0.4s;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    background-color: #F8EED7;
+    z-index: 999; 
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    opacity: 95%;
+    color: #003f7f;
+}
+
+.menu.active {
+    display: block;
 }
 
 /* Media Queries */
@@ -83,7 +112,7 @@
         top: 60px;
         right: 0;
         transform: skew(20deg);
-        margin-right: -10%; /* Ensure no margin on the right */
+        margin-right: -10%; 
         text-align: center;
         opacity: 85%;
     }
@@ -110,8 +139,32 @@
         bottom: 0;
     }
 
-    .hamburger {
+.hamburger {
         display: flex;
+    }
+}
+
+/* Media query for tablets and mobile devices */
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;  
+        flex-direction: column;
+        cursor: pointer;
+        transform: skew(20deg);
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000; 
+    }
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #F8EED7;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+    .nav-links {
+        display: none;
     }
 }
 

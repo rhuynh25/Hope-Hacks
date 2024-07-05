@@ -1,4 +1,4 @@
 function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
 }
