@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-const apiKey = 'UC0YoVdQzrav2kmHcCi3ET0nUovZPHb6';
+const apiKey = 'your_api_key_here';
 
 // Middleware
 app.use(bodyParser.json());
