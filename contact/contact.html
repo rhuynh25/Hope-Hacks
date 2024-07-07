@@ -14,19 +14,30 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">HH</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#login">Login</a></li>
-                <li><a href="/service/service.html">Services</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="logo">
+                <a href="/home/index.html"><img src="/service/images/logo.png" alt="Health Hacks Logo"></a>
             </div>
+            <ul class="nav-links">
+            <li><a href="/home/index.html">Home</a></li>
+            <li><a href="/aboutUs/about.html">About Us</a></li>
+            <li><a href="/contact/contact.html">Contact</a></li>
+            <li><a href="/login/login.html">Login</a></li>
+            <li><a href="/service/service.html">Services</a></li>
+            </ul>
+
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="/home/index.html" aria-label="Navigate to the home page.">Home</a></li>
+                    <li><a href="/aboutUs/about.html" aria-label="Navigate to the about us page.">About Us</a></li>
+                    <li><a href="/contact/contact.html" aria-label="Navigate to the contact page.">Contact</a></li>
+                    <li><a href="/login/login.html" aria-label="Navigate to the login page.">Login</a></li>
+                    <li><a href="/service/service.html" aria-label="Navigate to the services page.">Services</a></li>
+                </ul>
+          </div>
         </nav>
     </header>
     <main>
@@ -82,7 +93,7 @@
     <footer>
         <div class="footer-container">
             <div class="logo-container">
-                <img src="/contact/logo.png" alt="Hope Hacks Logo" id="logo" style="width: 200px; height:auto"/>
+                <img src="/service/images/logo.png" alt="Hope Hacks Logo" id="logo" style="width: 200px; height:auto"/>
             </div>
             <!-- Social Media Links -->
             <div class="social-icons">
@@ -105,5 +116,6 @@
     </footer>
 
     <script src="contact.js"></script>
+    <script src="/service/navbar.js"></script>
 </body>
 </html>

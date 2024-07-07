@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 const app = express();
 const port = 3000;
 
-const apiKey = process.env.API_KEY;
+const apiKey = 'UC0YoVdQzrav2kmHcCi3ET0nUovZPHb6';
 
 // Middleware
 app.use(bodyParser.json());
@@ -120,7 +120,7 @@ app.post('/search-plans', async (req, res) => {
 
 app.post('/search-providers', async (req, res) => {
   const { query, zipcode, type} = req.body;
-  const apiKey = process.env.API_KEY;
+  const apiKey = 'UC0YoVdQzrav2kmHcCi3ET0nUovZPHb6';
   const apiUrl = `https://private-anon-c9adea25c6-marketplaceapicms.apiary-proxy.com/api/v1/providers/search?apikey=${apiKey}&q=${query}&zipcode=${zipcode}&type=${type}`;
 
   try {

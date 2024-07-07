@@ -1,3 +1,4 @@
+/* navigation bar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -63,46 +64,70 @@
     width: 100%;
 }
 
-.hamburger {
-    display: none; 
-    flex-direction: column;
+/* toggle button and dropdown menu styling for hamburger menu */
+.toggle-btn {
+    color: #F8EED7;
+    font-size: 1.5rem;
     cursor: pointer;
-    transform: skew(20deg);
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000; 
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #F8EED7;
-    margin: 4px 0;
-    transition: 0.4s;
-}
-
-.menu {
     display: none;
-    position: fixed;
-    top: 0;
-    width: 50%;
-    background-color: #F8EED7;
-    z-index: 999; 
+    margin: 20px;
+}
+
+.fa-solid .fa-bars {
+    display: inline-block;
+    background: #F8EED7;  
+    font-size: 24px; 
+    cursor: pointer;
+}
+
+.fa-solid .fa-bars :hover {
+    color: #ffcc00;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: linear-gradient(to right, lightgray, #F8EED7); 
+    overflow: hidden;
+    transition: height 0.5s ease; 
+    border-radius: 5%;
     font-family: "League Gothic", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    opacity: 95%;
-    color: #003f7f;
+    color: #4a90e2;;
+    opacity: 85%;
 }
 
-.menu.active {
-    display: block;
+.dropdown-menu.open {
+    display: block; 
+    height: auto;
+    overflow: visible;
 }
 
-/* Media Queries */
+.dropdown-menu li {
+    padding: 0.7rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dropdown-menu a:hover {
+    color: #ffcc00;
+}
+
+.toggle-btn:hover{
+    color: #ffcc00;
+}
+
+/* media queries */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -139,42 +164,24 @@
         bottom: 0;
     }
 
-.hamburger {
-        display: flex;
+    .toggle-btn {
+        display: block;
+    }
+
+    .dropdown-menu {
+        right: 0;
+        left: auto;
+        width: 50%;
     }
 }
 
-/* Media query for tablets and mobile devices */
+/* media queries */
 @media (max-width: 1024px) {
-    .hamburger {
-        display: flex;  
-        flex-direction: column;
-        cursor: pointer;
-        transform: skew(20deg);
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 1000; 
-    }
-    .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: #F8EED7;
-        margin: 4px 0;
-        transition: 0.4s;
+    .toggle-btn {
+        display: block;
     }
     .nav-links {
         display: none;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
