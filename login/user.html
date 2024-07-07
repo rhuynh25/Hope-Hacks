@@ -15,21 +15,34 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">HH</div>
-        <ul class="nav-links">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/home/index.html"><img src="/home/images/logo.png" alt="Health Hacks Logo"></a>
+            </div>
+            <ul class="nav-links">
             <li><a href="/home/index.html">Home</a></li>
             <li><a href="/aboutUs/about.html">About Us</a></li>
             <li><a href="/contact/contact.html">Contact</a></li>
             <li><a href="/login/login.html">Login</a></li>
             <li><a href="/service/service.html">Services</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
+            </ul>
+
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="/home/index.html" aria-label="Navigate to the home page.">Home</a></li>
+                    <li><a href="/aboutUs/about.html" aria-label="Navigate to the about us page.">Products</a></li>
+                    <li><a href="/contact/contact.html" aria-label="Navigate to the contact page.">Contact</a></li>
+                    <li><a href="/login/login.html" aria-label="Navigate to the login page.">Login</a></li>
+                    <li><a href="/service/service.html" aria-label="Navigate to the services page.">Services</a></li>
+                </ul>
+          </div>
+        </nav>
+    </header>
 
     <div class="form-container">
         <div class="user-info">
@@ -41,13 +54,16 @@
     <footer>
         <div class="footer-container">
             <div class="logo-container">
-                <img src="/contact/logo.png" alt="Hope Hacks Logo" id="logo" style="width: 200px; height:auto"/>
+                <img src="/home/images/logo.png" alt="Hope Hacks Logo" id="logo" style="width: 200px; height:auto" />
             </div>
             <!-- Social Media Links -->
             <div class="social-icons">
-                    <a href="www.facebook.com" aria-label="Go to shop's facebook page."><i class="fa-brands fa-facebook"></i></a>
-                    <a href="www.instagram.com" aria-label="Go to shop's instagram page."><i class="fa-brands fa-instagram"></i></a>
-                    <a href="www.tiktok.com" aria-label="Go to shop's tiktok page."><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com" aria-label="Go to shop's facebook page."><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com" aria-label="Go to shop's instagram page."><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com" aria-label="Go to shop's tiktok page."><i
+                        class="fa-brands fa-tiktok"></i></a>
             </div>
             <!-- Pages Links -->
             <div class="pages">
@@ -63,7 +79,29 @@
         </div>
     </footer>
 
-    <script src="validation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const userInfoDiv = document.getElementById('user-info');
+            const userData = JSON.parse(sessionStorage.getItem('user'));
+            console.log('User data from sessionStorage:', userData); //  Console log to check 
+
+            if (userData) {
+                userInfoDiv.innerHTML = `
+                    <p><strong>Name:</strong> ${userData.name}</p>
+                    <p><strong>Email:</strong> ${userData.email}</p>
+                    <p><strong>Birthdate:</strong> ${new Date(userData.birthdate).toLocaleDateString()}</p>
+                    <p><strong>Address:</strong> ${userData.address}</p>
+                    <p><strong>City:</strong> ${userData.city}</p>
+                    <p><strong>State:</strong> ${userData.state}</p>
+                    <p><strong>Zip Code:</strong> ${userData.zip_code}</p>
+                    <p><strong>Phone Number:</strong> ${userData.phone_number}</p>
+                    <p><strong>Healthcare Type:</strong> ${userData.healthcare_type}</p>
+                `;
+            } else {
+                userInfoDiv.innerHTML = '<p>No user data available. Please log in.</p>';
+            }
+        });
+    </script>
 </body>
 
 </html>
