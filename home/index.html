@@ -17,114 +17,144 @@
 <body>
     <div class="container">
         <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="/home/home.html"><img src="images/logo.png" alt="Health Hacks Logo"></a>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="/home/home.html">Home</a></li>
-                    <li><a href="/aboutUs/about.html">About Us</a></li>
-                    <li><a href="/contact/contact">Contact</a></li>
-                    <li><a href="/login/login">Login</a></li>
-                    <li><a href="/service/services">Services</a></li>
-                </ul>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="menu">
-                    <nav>
+            <header>
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="/home/index.html"><img src="/home/images/logo.png" alt="Health Hacks Logo"></a>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="/home/index.html">Home</a></li>
+                        <li><a href="/aboutUs/about.html">About Us</a></li>
+                        <li><a href="/contact/contact.html">Contact</a></li>
+                        <li><a href="/login/login.html">Login</a></li>
+                        <li><a href="/service/service.html">Services</a></li>
+                    </ul>
+
+                    <div class="toggle-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <div class="dropdown-menu">
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#login">Login</a></li>
-                            <li><a href="#services">Services</a></li>
+                            <li><a href="/home/index.html" aria-label="Navigate to the home page.">Home</a></li>
+                            <li><a href="/aboutUs/about.html" aria-label="Navigate to the about us page.">Products</a>
+                            </li>
+                            <li><a href="/contact/contact.html" aria-label="Navigate to the contact page.">Contact</a>
+                            </li>
+                            <li><a href="/login/login.html" aria-label="Navigate to the login page.">Login</a></li>
+                            <li><a href="/service/service.html" aria-label="Navigate to the services page.">Services</a>
+                            </li>
                         </ul>
-                    </nav>
+                    </div>
+                </nav>
+                <h1 class="title">WELCOME TO HEALTH HACKS</h1>
+            </header>
+            <main>
+                <div class="hero-image"></div>
+                <p class="about-para">Welcome to <span style="color: #4A90E2;">Health Hacks</span>, your trusted partner
+                    in
+                    navigating the complex world of health insurance and local healthcare providers. Our mission is to
+                    empower individuals and families by providing easy access to comprehensive health insurance
+                    information
+                    and connecting them with reliable local healthcare providers.</p>
+                <p class="about-para">Join us and take the first step towards a healthier, more secure future. Together,
+                    we
+                    can navigate the complexities of health insurance and healthcare, making it easier for you to access
+                    the
+                    care you need. Discover the difference that Health Hacks can make in your healthcare journey today.
+                </p>
+                </section>
+                <div class="content">
+                    <div class="content-box">
+                        <h3>About Us</h3>
+                        <p>At Health Hacks, we are committed to making healthcare accessible to everyone. Our mission is
+                            to
+                            provide reliable and up-to-date information on health insurance options and healthcare
+                            services.
+                            Our team is passionate about helping individuals and families navigate the complex world of
+                            healthcare.</p>
+                        <a href="/aboutUs/about.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="content-box">
+                        <h3>Contact</h3>
+                        <p>If you have any questions or need assistance, please don't hesitate to reach out to us. Our
+                            team
+                            is here to support you and provide the information you need to make informed decisions about
+                            your health. Feel free to contact us via email or phone.</p>
+                        <a href="/contact/contact.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="content-box">
+                        <h3>Health Insurance</h3>
+                        <p>Finding the right health insurance plan can be challenging. At Health Hacks, we simplify the
+                            process by providing comprehensive information on various health insurance options. Whether
+                            you're looking for individual, family, or employer-sponsored plans, we have the resources
+                            you
+                            need.</p>
+                        <a href="/service/provider.html" class="btn">Learn More</a>
+                    </div>
+                    <div class="content-box">
+                        <h3>Login/Register</h3>
+                        <p>Access your account to manage your health insurance information, update your profile, or
+                            register
+                            for a new account. Our secure portal ensures your personal information is protected and
+                            easily
+                            accessible when you need it.</p>
+                        <a href="/login/login.html" class="btn">Learn More</a>
+                    </div>
                 </div>
-            </nav>
-            <h1 class="title">WELCOME TO HEALTH HACKS</h1>
-        </header>
-        <main>
-            <div class="hero-image"></div>
-            <p class="about-para">Welcome to <span style="color: #4A90E2;">Health Hacks</span>, your trusted partner in
-                navigating the complex world of health insurance and local healthcare providers. Our mission is to
-                empower individuals and families by providing easy access to comprehensive health insurance information
-                and connecting them with reliable local healthcare providers.</p>
-            <p class="about-para">Join us and take the first step towards a healthier, more secure future. Together, we
-                can navigate the complexities of health insurance and healthcare, making it easier for you to access the
-                care you need. Discover the difference that Health Hacks can make in your healthcare journey today.</p>
-            </section>
-            <div class="content">
-                <div class="content-box">
-                    <h3>About Us</h3>
-                    <p>At Health Hacks, we are committed to making healthcare accessible to everyone. Our mission is to
-                        provide reliable and up-to-date information on health insurance options and healthcare services.
-                        Our team is passionate about helping individuals and families navigate the complex world of
-                        healthcare.</p>
-                    <a href="about.html" class="btn">Learn More</a>
+            </main>
+            <footer>
+                <div class="footer-container">
+                    <div class="logo-container">
+                        <img src="/home/images/logo.png" alt="Hope Hacks Logo" id="logo"
+                            style="width: 200px; height:auto" />
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" aria-label="Visit our meta page!"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" aria-label="Visit our instagram page."><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com" target="_blank" aria-label="Visit our tiktok page."><i
+                                class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <!-- Pages Links -->
+                    <div class="pages">
+                        <a href="/home/index.html">Home</a>
+                        <a href="/service/service.html">Services</a>
+                        <a href="/aboutUs/about.html">About</a>
+                        <a href="/contact/contact.html">Contact</a>
+                        <a href="/login/login.html">Login</a>
+                    </div>
+                    <div class="copyright">
+                        <p class="copyright">Hope Hacks &copy;2023</p>
+                    </div>
                 </div>
-                <div class="content-box">
-                    <h3>Contact</h3>
-                    <p>If you have any questions or need assistance, please don't hesitate to reach out to us. Our team
-                        is here to support you and provide the information you need to make informed decisions about
-                        your health. Feel free to contact us via email or phone.</p>
-                    <a href="contact.html" class="btn">Learn More</a>
-                </div>
-                <div class="content-box">
-                    <h3>Health Insurance</h3>
-                    <p>Finding the right health insurance plan can be challenging. At Health Hacks, we simplify the
-                        process by providing comprehensive information on various health insurance options. Whether
-                        you're looking for individual, family, or employer-sponsored plans, we have the resources you
-                        need.</p>
-                    <a href="health-insurance.html" class="btn">Learn More</a>
-                </div>
-                <div class="content-box">
-                    <h3>Login/Register</h3>
-                    <p>Access your account to manage your health insurance information, update your profile, or register
-                        for a new account. Our secure portal ensures your personal information is protected and easily
-                        accessible when you need it.</p>
-                    <a href="login.html" class="btn">Learn More</a>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="footer-container">
-                <div class="logo-container">
-                    <img src="images/logo.png" alt="Hope Hacks Logo" id="logo" style="width: 200px; height:auto" />
-                </div>
-                <!-- Social Media Links -->
-                <div class="social-icons">
-                    <a href="www.facebook.com" aria-label="Go to shop's facebook page."><i
-                            class="fa-brands fa-facebook"></i></a>
-                    <a href="www.instagram.com" aria-label="Go to shop's instagram page."><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="www.tiktok.com" aria-label="Go to shop's tiktok page."><i
-                            class="fa-brands fa-tiktok"></i></a>
-                </div>
-                <!-- Pages Links -->
-                <div class="pages">
-                    <a href="/home/index.html">Home</a>
-                    <a href="/service/service.html">Services</a>
-                    <a href="/aboutUs/about.html">About</a>
-                    <a href="/contact/contact.html">Contact</a>
-                    <a href="/login/login.html">Login</a>
-                </div>
-                <div class="copyright">
-                    <p class="copyright">Hope Hacks &copy;2023</p>
-                </div>
-            </div>
-        </footer>
+            </footer>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('header nav');
-            hamburger.addEventListener('click', function () {
-                nav.classList.toggle('open');
-            });
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const toggleBtnIcon = document.querySelector('.toggle-btn i');
+        const dropDownMenu = document.querySelector('.dropdown-menu');
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open');
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        };
+
+        // dropdown menu and hero image functionality
+        var dropdownButton = document.querySelector('.toggle-btn');
+        var heroImage = document.querySelector('.hero-image');
+
+        dropdownButton.addEventListener('click', function () {
+            var dropdownMenu = document.querySelector('.dropdown-menu');
+            if (dropdownMenu.classList.contains('open')) {
+                heroImage.classList.add('shifted');
+            } else {
+                heroImage.classList.remove('shifted');
+            }
         });
     </script>
 </body>

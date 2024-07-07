@@ -24,11 +24,10 @@ document.getElementById('search-form').addEventListener('submit', function(event
     })
     .then(data => {
         // Handle API response data, display results dynamically
-        console.log(data); // For debugging, replace with actual result handling
-
-        // Example: Display results in results-container
+        console.log(data); 
+  
         const resultsContainer = document.querySelector('.results-container');
-        resultsContainer.innerHTML = ''; // Clear previous results
+        resultsContainer.innerHTML = ''; 
 
         if (data.plans && data.plans.length > 0) {
             data.plans.forEach(plan => {
@@ -69,6 +68,11 @@ document.getElementById('search-form').addEventListener('submit', function(event
                 brochureUrl.href = plan.brochureUrl;
                 brochureUrl.textContent = 'View Brochure';
                 planElement.appendChild(brochureUrl);
+
+                const viewPlanButton = document.createElement('button');
+                viewPlanButton.textContent = 'View Plans';
+                viewPlanButton.classList.add('view-btn');
+                planElement.appendChild(viewPlanButton);
 
                 resultsContainer.appendChild(planElement);
             });

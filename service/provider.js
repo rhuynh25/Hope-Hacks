@@ -52,6 +52,7 @@ document.getElementById('providerSearchForm').addEventListener('submit', functio
                 phoneElement.textContent = `Phone: ${provider.address.phone}`;
                 phoneElement.classList.add('provider-details');
                 providerElement.appendChild(phoneElement);
+                
 
                 resultsContainer.appendChild(providerElement);
             });
@@ -62,6 +63,6 @@ document.getElementById('providerSearchForm').addEventListener('submit', functio
     .catch(error => {
         console.error('Error:', error);
         const resultsContainer = document.getElementById('results-container');
-        resultsContainer.innerHTML = `<p>${error.message}</p>`;
+        resultsContainer.innerHTML = `<p id="error-message">${error.message}</p>`;
     });
 });
