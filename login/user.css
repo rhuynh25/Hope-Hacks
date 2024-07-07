@@ -12,7 +12,7 @@ div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "League Gothic", sans-serif;
 }
 
 /* Navbar styles */
@@ -21,19 +21,22 @@ div {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(135deg, #4A90E2, #003F7F);
-    border-bottom: 2px solid #003F7F;
+    background: linear-gradient(135deg, #4a90e2, #007aff, #005bb5, #003f7f);
+    border-bottom: 2px solid #003f7f;
     transform: skew(-20deg);
     margin: 20px;
-    opacity: 0.85;
+    opacity: 85%;
     box-shadow: 10px 10px 10px #666;
 }
 
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
+.logo {
     transform: skew(20deg);
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    border-radius: 20%;
 }
 
 .nav-links {
@@ -41,9 +44,12 @@ div {
     display: flex;
     gap: 20px;
     transform: skew(20deg);
-    font-family: Arial, sans-serif;
-    color: white;
-    font-size: 20px;
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 2rem;
 }
 
 .nav-links li {
@@ -53,11 +59,11 @@ div {
 .nav-links a {
     text-decoration: none;
     transition: color 0.3s;
-    color: white;
+    color: #F8EED7;
 }
 
 .nav-links a:hover {
-    color: #FFCC00;
+    color: #ffcc00;
 }
 
 .nav-links::after {
@@ -65,7 +71,7 @@ div {
     position: absolute;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, transparent, #007AFF);
+    background: linear-gradient(to right, transparent, #007aff);
     bottom: -10px;
     left: 0;
     transition: width 0.3s;
@@ -75,20 +81,71 @@ div {
     width: 100%;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
+/* Hamburger menu */
+.toggle-btn {
+    color: #F8EED7;
+    font-size: 1.5rem;
     cursor: pointer;
-    transform: skew(20deg);
+    display: none;
+    margin: 20px;
 }
 
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
+.fa-solid .fa-bars {
+    display: inline-block;
+    background: #F8EED7;  
+    font-size: 24px; 
+    cursor: pointer;
 }
+
+.fa-solid .fa-bars :hover {
+    color: #ffcc00;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: linear-gradient(to right, lightgray, #F8EED7); 
+    overflow: hidden;
+    transition: height 0.5s ease; 
+    border-radius: 5%;
+    font-family: "League Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #4a90e2;;
+    opacity: 85%;
+}
+
+.dropdown-menu.open {
+    display: block; 
+    height: auto;
+    overflow: visible;
+}
+
+.dropdown-menu li {
+    padding: 0.7rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dropdown-menu a:hover {
+    color: #ffcc00;
+}
+
+.toggle-btn:hover{
+    color: #ffcc00;
+}
+
+
+
 
 /* Form container styles */
 .form-container {
@@ -217,15 +274,14 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 25%;
         position: absolute;
         top: 60px;
         right: 0;
         transform: skew(20deg);
-        margin-right: 0;
+        margin-right: -10%; 
         text-align: center;
-        opacity: 0.85;
-        background: linear-gradient(135deg, #4A90E2, #003F7F);
+        opacity: 85%;
     }
 
     .nav-links.active {
@@ -234,7 +290,7 @@ footer {
 
     .nav-links a {
         font-size: 16px;
-        color: #fff;
+        color: #003f7f;
     }
 
     .nav-links li {
@@ -242,15 +298,6 @@ footer {
     }
 
     .nav-links a:hover {
-        color: #FFCC00;
-    }
-
-    .nav-links::after {
-        height: 1px;
-        bottom: 0;
-    }
-
-    .hamburger {
-        display: flex;
+        color: #ffcc00;
     }
 }
