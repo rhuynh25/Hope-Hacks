@@ -9,117 +9,121 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="/home/home.html"><img src="images/logo.png" alt="Health Hacks Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="/home/home.html">Home</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/home/index.html"><img src="images/logo.png" alt="Health Hacks Logo"></a>
+            </div>
+            <ul class="nav-links">
+            <li><a href="/home/index.html">Home</a></li>
             <li><a href="/aboutUs/about.html">About Us</a></li>
             <li><a href="/contact/contact.html">Contact</a></li>
             <li><a href="/login/login.html">Login</a></li>
-            <li><a href="/service/services.html">Services</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="menu">
-<nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#login">Login</a></li>
-                <li><a href="#services">Services</a></li>
+            <li><a href="/service/service.html">Services</a></li>
             </ul>
-</nav>
-        </div>
-    </nav>
 
-    <section class="hero-image">
-        <div class="hero-text">
-          <h1 class="title">ABOUT US</h1> 
-          <p>CRACKING THE <span style="color: #4a90e2;">CODE</span> TO OPTIMAL COVERAGE AND CARE</p>
-          <button class="round-button" onclick="location.href='contact.html'">REACH OUT</button>
-        </div>
-    </section>
-
-    <section class="about">
-        <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">Who We Are:</span> Health Hacks is a dedicated team of professionals passionate about simplifying healthcare access. We believe that everyone deserves clear, concise, and accurate information to make informed decisions about their health and well-being. Our team comprises experts in healthcare, insurance, and technology, all working together to create a seamless experience for our users.</p>
-        <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">What We Do:</span> We provide a user-friendly platform that offers detailed information on various health insurance plans and helps you find trusted healthcare providers in your area. Our comprehensive database includes a wide range of insurance options, from private plans to government programs, ensuring that you can find the coverage that best suits your needs. Additionally, our provider directory is regularly updated to include the most reputable doctors, clinics, and hospitals near you.</p>
-        <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">When We Started:</span> Health Hacks was founded in 2023 with the vision of transforming how people access health insurance information and healthcare services. Since our inception, we have been committed to improving the healthcare experience for our users. Our journey began with a small team of innovators who saw the need for a more transparent and accessible healthcare system. Over the years, we have grown into a trusted resource for thousands of individuals and families.</p>
-        <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">Where We Operate:</span> Based in Charlotte, North Carolina, we serve communities across the United States. Our platform is designed to be accessible to users nationwide, ensuring that everyone can benefit from our services. Whether you’re in a bustling city or a rural town, Health Hacks is here to help you navigate your healthcare options.</p>
-        <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">Why We Exist: </span> We understand that navigating the healthcare system can be overwhelming. Our purpose is to simplify health insurance and healthcare provider selection, making it easier for you to find the right coverage and care. We are here to support you every step of the way, providing the resources and information you need to make confident health decisions. Our commitment to transparency, accuracy, and user satisfaction drives everything we do.</p>
-        <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">Our Vision:</span> At Health Hacks, we envision a world where everyone has access to the healthcare information they need to lead healthy, fulfilling lives. We strive to be the go-to resource for health insurance and provider information, continually improving our platform to meet the evolving needs of our users.</p>
-
-    <h1>
-        OUR TEAM
-    </h1>
-
-    <section class="slider-wrapper">
-        <div class="slider">
-            <div class="slide">
-                <img src="images/Katya Martinez Camarillo Headshot.JPG" alt="Kat">
-                <div class="slide-title">Katya Camarillo | Founder & Chief Executive Officer (CEO)</div>
-                <div class="slide-description">Introducing Katya Camarillo, our Founder and CEO, whose visionary leadership and entrepreneurial spirit have been the driving force behind Health Hacks. With a decade-spanning career that’s as diverse as the health plans we compare, Katya has mastered the art of juggling complex projects with the finesse of a seasoned acrobat. Her journey from healthcare consultant to the CEO’s chair is paved with innovative solutions, always delivered with her signature blend of warmth and wit. Under her leadership, we’ve streamlined processes, embraced cutting-edge technologies, and cultivated a team that’s as dedicated to your health as they are to morning yoga sessions. Katya’s mantra?<span style="color: #4a90e2;"> “Efficiency with a heart.”</span> And it’s this unique blend of compassion and command that ensures Health Hacks not only meets your needs but exceeds your expectations.<span style="color: #4a90e2;">(Swipe to view the rest of our team!)</span></div>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="slide">
-                <img src="images/Josh Drakeford Headshot (1).JPG" alt="Josh">
-                <div class="slide-title">Joshua Drakeford | Chief Product Officer (CPO)</div>
-                <div class="slide-description">Here's Josh Drakeford, our Chief Product Officer, whose innovative spirit and product genius are the lifeblood of Health Hacks. Josh’s journey through the tech and healthcare landscapes has been nothing short of a high-stakes, high-reward adventure. With a keen eye for detail and a knack for predicting industry trends, he’s the maestro behind our user-centric platform. His resume reads like a ‘who’s who’ of tech giants, but it’s his passion for making healthcare accessible that truly sets him apart. Whether he’s fine-tuning our comparison algorithms or hosting impromptu brainstorming sessions over espresso shots, Josh believes in one thing: transforming the complex world of health insurance into a navigable map for our users. His motto?<span style="color: #4a90e2;"> “Innovation with intention.”</span> It’s this purpose-driven approach that ensures Health Hacks isn’t just a service—it’s a solution tailored to fit the unique journey of every user.</div>
-            </div>
-            <div class="slide">
-                <img src="images/Vyncent Harris Headshot(1).JPG" alt="Vync">
-                <div class="slide-title">Vyncent Harris | Medical and Health Services Manager</div>
-                <div class="slide-description">Meet Vyncent Harris, our Medical and Health Services Manager, who’s as adept at navigating healthcare policies as he is at charting a course through the great outdoors. With over a decade of experience in the healthcare industry, Vyncent has mastered the art of blending regulatory savvy with patient-first advocacy. His transition from hands-on patient care to the meticulous orchestration of health services has armed him with diagnostic acumen and a flair for analytics, ensuring a balance between compassionate care and strategic efficiency. Whether he’s analyzing the latest health insurance policies or coordinating with doctors to ensure top-notch care, Vyncent believes in creating a seamless experience for our clients. His mission? To ensure that the path to wellness is clear, accessible, and as worry-free as a walk in the park.</div>
-            </div>
-            <div class="slide">
-                <img src="images/Richard Huynh Headshot.JPG" alt="Richy">
-                <div class="slide-title">Dr. Richard Huynh | Healthcare Compliance Officer (HCO)</div>
-                <div class="slide-description">Presenting Dr. Richard Huynh <span style="color: #4a90e2;">(Dr. Richy)</span>, our Medical and Health Services Manager, whose passion for healthcare is only matched by his love for a good medical mystery novel. With a rich background that spans from emergency rooms to executive boardrooms, Dr. Huynh has become the Sherlock Holmes of healthcare management. His expertise in deciphering the complex language of health insurance benefits and his knack for connecting patients with the perfect physician make him an invaluable asset to our team. He’s not just about the numbers; he is focused on the personal tales that accompany each statistic, making certain that every individual’s route to health is as effortless as the precise movements of a seasoned physician’s hands. At the heart of it all, Dr. Huynh is our very own healthcare hero, donning a button-up by day and a cape of compassion by night.</div>
-            </div>
-        </div>
-    </section>
 
-    <h1>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="/home/index.html" aria-label="Navigate to the home page.">Home</a></li>
+                    <li><a href="/aboutUs/about.html" aria-label="Navigate to the about us page.">About Us</a></li>
+                    <li><a href="/contact/contact.html" aria-label="Navigate to the contact page.">Contact</a></li>
+                    <li><a href="/login/login.html" aria-label="Navigate to the login page.">Login</a></li>
+                    <li><a href="/service/service.html" aria-label="Navigate to the services page.">Services</a></li>
+                </ul>
+          </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-image">
+            <div class="hero-text">
+                <h1 class="title">ABOUT US</h1> 
+                <p>CRACKING THE <span style="color: #4a90e2;">CODE</span> TO OPTIMAL COVERAGE AND CARE</p>
+                <button class="round-button" onclick="location.href='/contact/contact.html'">REACH OUT</button>
+            </div>
+        </section>
+
+        <section class="about">
+            <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">Who We Are:</span> Health Hacks is a dedicated team of professionals passionate about simplifying healthcare access. We believe that everyone deserves clear, concise, and accurate information to make informed decisions about their health and well-being. Our team comprises experts in healthcare, insurance, and technology, all working together to create a seamless experience for our users.</p>
+            <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">What We Do:</span> We provide a user-friendly platform that offers detailed information on various health insurance plans and helps you find trusted healthcare providers in your area. Our comprehensive database includes a wide range of insurance options, from private plans to government programs, ensuring that you can find the coverage that best suits your needs. Additionally, our provider directory is regularly updated to include the most reputable doctors, clinics, and hospitals near you.</p>
+            <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">When We Started:</span> Health Hacks was founded in 2023 with the vision of transforming how people access health insurance information and healthcare services. Since our inception, we have been committed to improving the healthcare experience for our users. Our journey began with a small team of innovators who saw the need for a more transparent and accessible healthcare system. Over the years, we have grown into a trusted resource for thousands of individuals and families.</p>
+            <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">Where We Operate:</span> Based in Charlotte, North Carolina, we serve communities across the United States. Our platform is designed to be accessible to users nationwide, ensuring that everyone can benefit from our services. Whether you’re in a bustling city or a rural town, Health Hacks is here to help you navigate your healthcare options.</p>
+            <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">Why We Exist: </span> We understand that navigating the healthcare system can be overwhelming. Our purpose is to simplify health insurance and healthcare provider selection, making it easier for you to find the right coverage and care. We are here to support you every step of the way, providing the resources and information you need to make confident health decisions. Our commitment to transparency, accuracy, and user satisfaction drives everything we do.</p>
+            <p class="about-para"><span style="color: #4a90e2; font-weight: bold;">Our Vision:</span> At Health Hacks, we envision a world where everyone has access to the healthcare information they need to lead healthy, fulfilling lives. We strive to be the go-to resource for health insurance and provider information, continually improving our platform to meet the evolving needs of our users.</p>
+
+            <h1>OUR TEAM</h1>
+        </section>
+
+        <section class="slider-wrapper">
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/Katya Martinez Camarillo Headshot.JPG" alt="Kat">
+                    <div class="slide-title">Katya Camarillo | Founder & Chief Executive Officer (CEO)</div>
+                    <div class="slide-description">Introducing Katya Camarillo, our Founder and CEO, whose visionary leadership and entrepreneurial spirit have been the driving force behind Health Hacks. With a decade-spanning career that’s as diverse as the health plans we compare, Katya has mastered the art of juggling complex projects with the finesse of a seasoned acrobat. Her journey from healthcare consultant to the CEO’s chair is paved with innovative solutions, always delivered with her signature blend of warmth and wit. Under her leadership, we’ve streamlined processes, embraced cutting-edge technologies, and cultivated a team that’s as dedicated to your health as they are to morning yoga sessions. Katya’s mantra?<span style="color: #4a90e2;"> “Efficiency with a heart.”</span> And it’s this unique blend of compassion and command that ensures Health Hacks not only meets your needs but exceeds your expectations.<span style="color: #4a90e2;">(Swipe to view the rest of our team!)</span></div>
+                </div>
+                <div class="slide">
+                    <img src="images/Josh Drakeford Headshot (1).JPG" alt="Josh">
+                    <div class="slide-title">Joshua Drakeford | Chief Product Officer (CPO)</div>
+                    <div class="slide-description">Here's Josh Drakeford, our Chief Product Officer, whose innovative spirit and product genius are the lifeblood of Health Hacks. Josh’s journey through the tech and healthcare landscapes has been nothing short of a high-stakes, high-reward adventure. With a keen eye for detail and a knack for predicting industry trends, he’s the maestro behind our user-centric platform. His resume reads like a ‘who’s who’ of tech giants, but it’s his passion for making healthcare accessible that truly sets him apart. Whether he’s fine-tuning our comparison algorithms or hosting impromptu brainstorming sessions over espresso shots, Josh believes in one thing: transforming the complex world of health insurance into a navigable map for our users. His motto?<span style="color: #4a90e2;"> “Innovation with intention.”</span> It’s this purpose-driven approach that ensures Health Hacks isn’t just a service—it’s a solution tailored to fit the unique journey of every user.</div>
+                </div>
+                <div class="slide">
+                    <img src="images/Vyncent Harris Headshot(1).JPG" alt="Vync">
+                    <div class="slide-title">Vyncent Harris | Medical and Health Services Manager</div>
+                    <div class="slide-description">Meet Vyncent Harris, our Medical and Health Services Manager, who’s as adept at navigating healthcare policies as he is at charting a course through the great outdoors. With over a decade of experience in the healthcare industry, Vyncent has mastered the art of blending regulatory savvy with patient-first advocacy. His transition from hands-on patient care to the meticulous orchestration of health services has armed him with diagnostic acumen and a flair for analytics, ensuring a balance between compassionate care and strategic efficiency. Whether he’s analyzing the latest health insurance policies or coordinating with doctors to ensure top-notch care, Vyncent believes in creating a seamless experience for our clients. His mission? To ensure that the path to wellness is clear, accessible, and as worry-free as a walk in the park.</div>
+                </div>
+                <div class="slide">
+                    <img src="images/Richard Huynh Headshot.JPG" alt="Richy">
+                    <div class="slide-title">Dr. Richard Huynh | Healthcare Compliance Officer (HCO)</div>
+                    <div class="slide-description">Presenting Dr. Richard Huynh <span style="color: #4a90e2;">(Dr. Richy)</span>, our Medical and Health Services Manager, whose passion for healthcare is only matched by his love for a good medical mystery novel. With a rich background that spans from emergency rooms to executive boardrooms, Dr. Huynh has become the Sherlock Holmes of healthcare management. His expertise in deciphering the complex language of health insurance benefits and his knack for connecting patients with the perfect physician make him an invaluable asset to our team. He’s not just about the numbers; he is focused on the personal tales that accompany each statistic, making certain that every individual’s route to health is as effortless as the precise movements of a seasoned physician’s hands. At the heart of it all, Dr. Huynh is our very own healthcare hero, donning a button-up by day and a cape of compassion by night.</div>
+                </div>
+            </div>
+        </section>
+
+        <h1>
         OUR SUPPORTERS
-    </h1>
+        </h1>
 
-    <section class="container">
-        <div class="item">
-            <img src="images/ally-bank-logo-png-transparent.png" alt="Ally">
-            <div class="content">
-                <h2>Ally Bank</h2>
-                <p>Ally Bank is a proud supporter of Health Hacks, contributing to our mission of simplifying healthcare access for everyone. Ally Bank’s commitment to financial and social inclusion aligns perfectly with our goals. Through their charitable grants and sponsorships, Ally Bank helps us reduce barriers to healthcare by funding initiatives that promote economic mobility and community well-being. Their support enables us to maintain and expand our comprehensive database of health insurance plans and trusted healthcare providers, ensuring that our users have access to the best possible information and services. Ally Bank’s dedication to fostering financial stability and security empowers us to continue our work in making healthcare information accessible and understandable for all.</p>
+        <section class="container">
+            <div class="item">
+                <img src="images/ally-bank-logo-png-transparent.png" alt="Ally">
+                <div class="content">
+                    <h2>Ally Bank</h2>
+                    <p>Ally Bank is a proud supporter of Health Hacks, contributing to our mission of simplifying healthcare access for everyone. Ally Bank’s commitment to financial and social inclusion aligns perfectly with our goals. Through their charitable grants and sponsorships, Ally Bank helps us reduce barriers to healthcare by funding initiatives that promote economic mobility and community well-being. Their support enables us to maintain and expand our comprehensive database of health insurance plans and trusted healthcare providers, ensuring that our users have access to the best possible information and services. Ally Bank’s dedication to fostering financial stability and security empowers us to continue our work in making healthcare information accessible and understandable for all.</p>
+                </div>
             </div>
-        </div>
-        <div class="item right">
-            <img src="images/blue-cross-blue-shield-1-logo-png-transparent.png" alt="BCBS">
-            <div class="content">
-                <h2>Blue Cross Blue Shield Association</h2>
-                <p>Blue Cross Blue Shield partners with Health Hacks to enhance our platform’s capabilities through their extensive network of health insurance providers. Their support helps us provide users with detailed information on various health insurance plans and trusted healthcare providers. Blue Cross Blue Shield’s commitment to improving health outcomes aligns with our mission to simplify healthcare access. Their contributions enable us to develop programs that educate users about the importance of preventive care and healthy living, empowering individuals to make informed decisions about their health.</p>
+
+            <div class="item right">
+                <img src="images/blue-cross-blue-shield-1-logo-png-transparent.png" alt="BCBS">
+                <div class="content">
+                    <h2>Blue Cross Blue Shield Association</h2>
+                    <p>Blue Cross Blue Shield partners with Health Hacks to enhance our platform’s capabilities through their extensive network of health insurance providers. Their support helps us provide users with detailed information on various health insurance plans and trusted healthcare providers. Blue Cross Blue Shield’s commitment to improving health outcomes aligns with our mission to simplify healthcare access. Their contributions enable us to develop programs that educate users about the importance of preventive care and healthy living, empowering individuals to make informed decisions about their health.</p>
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="images/nike-4-logo-png-transparent.png" alt="Nike">
-            <div class="content">
-                <h2>Nike, Inc.</h2>
-                <p>Nike, Inc. supports Health Hacks by promoting physical well-being and active lifestyles. Their dedication to health and fitness aligns with our mission to provide comprehensive healthcare information. Nike’s sponsorship helps us develop programs that encourage physical activity and wellness, which are crucial components of overall health. Their support also enables us to expand our provider directory to include fitness and wellness centers, ensuring that our users have access to a wide range of health services. Nike’s commitment to health and wellness inspires us to continue our efforts in making healthcare information accessible and actionable for everyone.</p>
+        
+            <div class="item">
+                <img src="images/nike-4-logo-png-transparent.png" alt="Nike">
+                <div class="content">
+                    <h2>Nike, Inc.</h2>
+                    <p>Nike, Inc. supports Health Hacks by promoting physical well-being and active lifestyles. Their dedication to health and fitness aligns with our mission to provide comprehensive healthcare information. Nike’s sponsorship helps us develop programs that encourage physical activity and wellness, which are crucial components of overall health. Their support also enables us to expand our provider directory to include fitness and wellness centers, ensuring that our users have access to a wide range of health services. Nike’s commitment to health and wellness inspires us to continue our efforts in making healthcare information accessible and actionable for everyone.</p>
+                </div>
             </div>
-        </div>
-        <div class="item right">
-            <img src="images/cvs-health-logo-stacked.webp" alt="CVS Health">
-            <div class="content">
-                <h2>CVS Health</h2>
-                <p>CVS Health supports Health Hacks by providing resources and funding for our platform. Their extensive network of pharmacies and healthcare services aligns with our mission to simplify healthcare access. CVS Health’s contributions help us maintain and expand our comprehensive database of health insurance plans and trusted healthcare providers. Their commitment to community health and wellness enables us to offer users valuable information and services, ensuring that everyone can find the coverage and care they need.</p>
+        
+            <div class="item right">
+                <img src="images/cvs-health-logo-stacked.webp" alt="CVS Health">
+                <div class="content">
+                    <h2>CVS Health</h2>
+                    <p>CVS Health supports Health Hacks by providing resources and funding for our platform. Their extensive network of pharmacies and healthcare services aligns with our mission to simplify healthcare access. CVS Health’s contributions help us maintain and expand our comprehensive database of health insurance plans and trusted healthcare providers. Their commitment to community health and wellness enables us to offer users valuable information and services, ensuring that everyone can find the coverage and care they need.</p>
+                </div>
             </div>
-        </div>
-    </section> 
+        </section>
+    </main> 
 
     <footer>
         <div class="footer-container">
@@ -128,9 +132,9 @@
             </div>
             <!-- Social Media Links -->
             <div class="social-icons">
-                    <a href="www.facebook.com" aria-label="Go to shop's facebook page."><i class="fa-brands fa-facebook"></i></a>
-                    <a href="www.instagram.com" aria-label="Go to shop's instagram page."><i class="fa-brands fa-instagram"></i></a>
-                    <a href="www.tiktok.com" aria-label="Go to shop's tiktok page."><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Visit our meta page!"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Visit our instagram page."><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com" target="_blank" aria-label="Visit our tiktok page."><i class="fa-brands fa-tiktok"></i></a>
             </div>
             <!-- Pages Links -->
             <div class="pages">
