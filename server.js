@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const dotenv = require('dotenv');
+const mysql = require('mysql2');
 
 const app = express();
 const port = 3000;
@@ -19,6 +20,7 @@ app.use(express.static('contact'));
 app.use(express.static('service'));
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get('/', (req, res) => {
@@ -136,6 +138,55 @@ app.post('/search-providers', async (req, res) => {
 }
 });
 
+const connection = mysql.createConnection({
+  host: 'sql5.freesqldatabase.com',  // Remote database host
+  database: 'sql5718336',            // Remote database name
+  user: 'sql5718336',                // Remote database user
+  password: 'vpF2eG1TX5',            // Remote database password
+  port: 3306                         // Default MySQL port
+});
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('MySQL Database is Connected!');
+});
+
+
+app.post('/register', (req, res) => {
+  // Destructure the request body to get user data
+  const { name, email, password, birthdate, address, city, state, zip_code, phone_number, healthcare_type } = req.body;
+
+  // SQL query to insert user data into the users table
+  const sql = 'INSERT INTO users (name, email, password, birthdate, address, city, state, zip_code, phone_number, healthcare_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  connection.query(sql, [name, email, password, birthdate, address, city, state, zip_code, phone_number, healthcare_type], (err, result) => {
+      if (err) {
+          console.error('Error registering user:', err); // Log error if query fails
+          return res.status(500).send('Error registering user.'); // Send error response
+      }
+      console.log('User registered successfully:', result); // Log success message
+      res.status(200).redirect('/login/login.html'); // Redirect to login page
+  });
+});
+
+app.post('/login', (req, res) => {
+  // Destructure the request body to get login data
+  const { email, password } = req.body;
+
+  // SQL stored procedure call to verify user credentials
+  const sql = 'CALL LoginUser(?, ?)'; // ? Placeholder
+  connection.query(sql, [email, password], (err, results) => {
+      if (err) {
+          console.error('Error logging in:', err); // Log error if query fails
+          return res.status(500).send('Error logging in.'); // Send error response
+      }
+      if (results[0].length === 0) {
+          return res.status(400).send('Invalid email or password.'); // Send error if no matching user found
+      }
+
+      const user = results[0][0]; // Get user data from the result
+      res.status(200).json(user); // Send user data as JSON response
+  });
+});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
