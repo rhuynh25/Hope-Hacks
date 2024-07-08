@@ -258,17 +258,20 @@ main {
 .about-para {
     font-size: 1rem;
     color: #666;
-    padding: 0 10%;
+    line-height: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     animation: slideInFromLeft 3s ease-out;
-    margin-top: 1rem;
+    text-align: center;
+    margin-top: 2em;
+
+    padding: 0 2em;
 }
 
 .content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 2em;
+    margin: 5%;
     gap: 2em;
     animation: slideInFromLeft 3s ease-out;
 }
@@ -301,6 +304,8 @@ main {
     margin-bottom: 1.5em;
     flex-grow: 1;
     font-size: 1.2em;
+    font-weight: 200;
+    line-height: 1.5rem;
 }
 
 .btn {
@@ -379,6 +384,10 @@ footer {
 }
 
 @media (min-width: 768px) {
+
+    .about-para {
+        font-size: 1.25rem;
+    }
     .pages {
         flex-direction: row;
         justify-content: space-between;
@@ -457,6 +466,7 @@ footer {
         width: 100%;
         max-width: 90%;
         margin: 1em 0;
+
     }
 }
 
@@ -478,5 +488,9 @@ footer {
         color: white;
         font-size: 2.7rem;
         margin: 10px;
+    }
+
+    .content-box {
+        font-size: 1rem;
     }
 }
