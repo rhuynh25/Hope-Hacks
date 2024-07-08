@@ -303,6 +303,28 @@ button:hover {
     width: 60%
 }
 
+.provider-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+    padding: 10px;
+    box-shadow: #959da533 0px 8px 24px;
+    border-radius: 10px;
+    text-align: center;
+    width: 75%;
+}
+
+.provider-search a {
+    text-decoration: none;
+    color: #274C77;
+}
+
+.provider-search a:hover {
+    color: #717a85;
+}
+
 footer {
     display: fixed;
     margin-top: auto;
