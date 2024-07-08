@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql2');
+const path = require('path');  // Path Module Built into Node
 
 // Create an Express application
 const app = express();
@@ -11,15 +12,20 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files from the "login" directory
-app.use(express.static('login'));
+// Serve static files from the specific directories
+app.use('/login', express.static(path.join(__dirname, 'login')));
+app.use('/home', express.static(path.join(__dirname, 'home')));
+app.use('/aboutUs', express.static(path.join(__dirname, 'aboutUs')));
+app.use('/contact', express.static(path.join(__dirname, 'contact')));
+app.use('/service', express.static(path.join(__dirname, 'service')));
 
-// Create a MySQL connection
+// Create a MySQL connection to the remote database
 const connection = mysql.createConnection({
-    host: '127.0.0.1', // My IP address (Do not need place for root since it is using the default 3306)
-    database: 'HealthcareProject',
-    user: 'root',
-    password: 'password',
+    host: 'sql5.freesqldatabase.com',  // Remote database host
+    database: 'sql5718336',            // Remote database name
+    user: 'sql5718336',                // Remote database user
+    password: 'vpF2eG1TX5',            // Remote database password
+    port: 3306                         // Default MySQL port
 });
 
 // Connect to the MySQL database
@@ -28,59 +34,64 @@ connection.connect((err) => {
     console.log('MySQL Database is Connected!');
 });
 
-// Registration endpoint
+// Routes
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'home', 'index.html'));
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'aboutUs', 'about.html'));
+});
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'contact', 'contact.html'));
+});
+
+app.get('/insurance', (req, res) => {
+    res.sendFile(path.join(__dirname, 'service', 'service.html'));
+});
+
+app.get('/provider', (req, res) => {
+    res.sendFile(path.join(__dirname, 'service', 'provider.html'));
+});
+
+// Registration endpoint to handle user registration
 app.post('/register', (req, res) => {
-    // Takes the user details from the request body
+    // Destructure the request body to get user data
     const { name, email, password, birthdate, address, city, state, zip_code, phone_number, healthcare_type } = req.body;
 
-    // SQL query to insert a new user into the 'users' table ? are placeholders
+    // SQL query to insert user data into the users table
     const sql = 'INSERT INTO users (name, email, password, birthdate, address, city, state, zip_code, phone_number, healthcare_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-
-    // Execute the SQL query with the provided user details
     connection.query(sql, [name, email, password, birthdate, address, city, state, zip_code, phone_number, healthcare_type], (err, result) => {
-        // Handle any errors that occur during the query execution
         if (err) {
-            console.error('Error registering user:', err);
-            return res.status(500).send('Error registering user.');
+            console.error('Error registering user:', err); // Log error if query fails
+            return res.status(500).send('Error registering user.'); // Send error response
         }
-        // Log a success message and send a response back to the client
-        console.log('User registered successfully:', result);
-        res.status(200).json({ message: 'User registered successfully' });
+        console.log('User registered successfully:', result); // Log success message
+        res.status(200).redirect('/login/login.html'); // Redirect to login page
     });
 });
 
-// Login endpoint
+// Login endpoint to handle user login
 app.post('/login', (req, res) => {
-    // Extract the email and password from the request body 
+    // Destructure the request body to get login data
     const { email, password } = req.body;
 
-    // Define the SQL query to select the user with the provided email and password
-    // The '?' placeholders will be replaced by the values that are in the connection.query() i.e email and password
-    const sql = 'SELECT * FROM users WHERE email = ? AND password = ?';
-
-    // Execute the SQL query with the provided email and password
-    // connection.query(sql, [email, password], callback)
+    // SQL stored procedure call to verify user credentials
+    const sql = 'CALL LoginUser(?, ?)'; // ? Placeholder
     connection.query(sql, [email, password], (err, results) => {
-        // Check for any errors that occurred during the query execution
         if (err) {
-            // Log the error message to the console 
-            console.error('Error logging in:', err);
-            // Will Send a 500 error response to the client (website) 
-            return res.status(500).send('Error logging in.');
+            console.error('Error logging in:', err); // Log error if query fails
+            return res.status(500).send('Error logging in.'); // Send error response
         }
-        // Check if the query returned any results (i.e., if a user was found)
-        if (results.length === 0) {
-            // If no user is found, send a 400 response to the client with an error message
-            return res.status(400).send('Invalid email or password.');
+        if (results[0].length === 0) {
+            return res.status(400).send('Invalid email or password.'); // Send error if no matching user found
         }
 
-        // If a user is found, extract the user data from the query results
-        const user = results[0];
-        // Send the user data back to the client as a JSON response with a 200 OK status
-        res.status(200).json(user);
+        const user = results[0][0]; // Get user data from the result
+        res.status(200).json(user); // Send user data as JSON response
     });
 });
-
 
 // Start the server
 app.listen(port, () => {
