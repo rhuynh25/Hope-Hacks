@@ -38,7 +38,7 @@
             <div class="dropdown-menu">
                 <ul>
                     <li><a href="/home/index.html" aria-label="Navigate to the home page.">Home</a></li>
-                    <li><a href="/aboutUs/about.html" aria-label="Navigate to the about us page.">Products</a></li>
+                    <li><a href="/aboutUs/about.html" aria-label="Navigate to the about us page.">About Us</a></li>
                     <li><a href="/contact/contact.html" aria-label="Navigate to the contact page.">Contact</a></li>
                     <li><a href="/login/login.html" aria-label="Navigate to the login page.">Login</a></li>
                     <li><a href="/service/service.html" aria-label="Navigate to the services page.">Services</a></li>
@@ -54,31 +54,37 @@
                 <form id="register-form" action="/register" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name">
+                        <small></small>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email">
+                        <small></small>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password" name="password">
+                        <small></small>
                     </div>
                     <div class="form-group">
                         <label for="birthdate">Birthdate</label>
-                        <input type="date" id="birthdate" name="birthdate" required>
+                        <input type="date" id="birthdate" name="birthdate">
+                        <small></small>
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="text" id="address" name="address" required>
+                        <input type="text" id="address" name="address">
+                        <small></small>
                     </div>
                     <div class="form-group">
                         <label for="city">City</label>
-                        <input type="text" id="city" name="city" required>
+                        <input type="text" id="city" name="city">
+                        <small></small>
                     </div>
                     <div class="form-group">
                         <label for="state">State</label>
-                        <select id="state" name="state" required>
+                        <select id="state" name="state">
                             <option value="">Select a state</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -137,16 +143,19 @@
                             <option value="PR">Puerto Rico</option>
                             <option value="VI">U.S. Virgin Islands</option>
                         </select>
+                        <small></small>
                     </div>
                     <div class="form-group">
                         <label for="zip_code">Zip Code</label>
-                        <input type="text" id="zip_code" name="zip_code" required pattern="\d{5}(-\d{4})?"
+                        <input type="text" id="zip_code" name="zip_code" pattern="\d{5}(-\d{4})?"
                             title="Please enter a valid zip code">
+                            <small></small>
                     </div>
                     <div class="form-group">
                         <label for="phone_number">Phone Number</label>
-                        <input type="tel" id="phone_number" name="phone_number" required pattern="\d{10}"
+                        <input type="tel" id="phone_number" name="phone_number" pattern="\d{10}"
                             title="Please enter a valid 10-digit phone number">
+                            <small></small>
                     </div>
                     <div class="form-group">
                         <label for="healthcare_type">Type of Health Care</label>
@@ -156,6 +165,7 @@
                             <option value="Private Insurance">Private Insurance</option>
                             <option value="No Insurance">No Insurance</option>
                         </select>
+                        <small></small>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn">Register</button>
@@ -166,7 +176,7 @@
             <div class="info-section">
                 <h2>What Our Customers Say</h2>
                 <div class="testimonial">
-                    <p>"Health Hacks made finding the right health provider so easy! The platform is user-friendly and I
+                    <p>"Health Hacks, made finding the right health insurnace and provider easily! The platform is user-friendly and I
                         quickly found the best options available. Highly recommend!"</p>
                     <p><strong>Amy Smith</strong><br></p>
                 </div>
