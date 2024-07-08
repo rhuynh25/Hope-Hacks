@@ -133,6 +133,8 @@ header .hamburger img {
     height: auto;
 }
 
+
+
 /* Hamburger Menu */
 .toggle-btn {
     color: #F8EED7;
@@ -198,7 +200,7 @@ header .hamburger img {
 
 
 
-/* Main content */
+/* Main Content */
 main {
     flex: 1;
     display: flex;
@@ -274,6 +276,18 @@ main {
 
 .btn:hover {
     background-color: #005BB5;
+}
+
+.form-group.error {
+    position: relative;
+}
+
+.form-group.error small {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-size: .80rem;
 }
 
 

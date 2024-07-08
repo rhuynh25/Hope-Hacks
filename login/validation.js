@@ -1,69 +1,130 @@
-// Wait for the DOM to be fully loaded before executing the script
+// Wait for the DOM content to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-    // Register form validation and submission
-    const registerForm = document.getElementById('register-form');
-    if (registerForm) {
-        // Add an event listener for the form's submit event
-        registerForm.addEventListener('submit', function (event) {
-            let valid = true; // Variable to track if the form is valid
 
-            // Validate the name field
+    // Section: Form Validation and Submission
+    const registerForm = document.getElementById('register-form'); // Get the registration form element
+
+    // Check if the registration form exists
+    if (registerForm) {
+
+        // Add submit event listener to the registration form
+        registerForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let valid = true; // Flag to track form validity
+
+            // Validate Name 
             const name = document.getElementById('name');
             if (name.value.trim() === '') {
+                showError(name, 'Name is required');
                 valid = false;
-                alert('Name is required');
+            } else {
+                hideError(name);
             }
 
-            // Validate the email field 
+            // Validate Email
             const email = document.getElementById('email');
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email.value)) {
+                showError(email, 'Please enter a valid email address');
                 valid = false;
-                alert('Please enter a valid email address');
+            } else {
+                hideError(email);
             }
 
-            // Validate the password field to ensure it is at least 8 characters long
+            // Validate Password 
             const password = document.getElementById('password');
             if (password.value.length < 8) {
+                showError(password, 'Password must be at least 8 characters long');
                 valid = false;
-                alert('Password must be at least 8 characters long');
+            } else {
+                hideError(password);
             }
 
-            // Prevent form submission if any validation fails
-            if (!valid) {
-                event.preventDefault();
-                return; // Exit the function early if the form is not valid
+            // Address
+            const address = document.getElementById('address');
+            if (address.value.trim() === '') {
+                showError(address, 'Address is required');
+                valid = false;
+            } else {
+                hideError(address);
             }
 
-            // Prepare data for submission
-            // FormData object from the registration form element
-            const formData = new FormData(registerForm);
-            // Convert the FormData entries to a plain object
-            const data = Object.fromEntries(formData.entries()); // Convert form data to an object
+            // City
+            const city = document.getElementById('city');
+            if (city.value.trim() === '') {
+                showError(city, 'City is required');
+                valid = false;
+            } else {
+                hideError(city);
+            }
 
-            // Submit the form data using fetch
-            // Create an HTTP POST request to the /register endpoint
-            fetch('http://localhost:3000/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json' // Set the Content-Type to JSON
-                },
-                body: JSON.stringify(data) // Convert the data object to a JSON string placed in request body
-            })
-                .then(response => response.json()) // Convert the response from the server to JSON
-                .then(result => {
-                    alert(result.message); // Show success message from the server
-                    window.location.href = '/login/login.html'; // Redirect to login page
+            // State
+            const state = document.getElementById('state');
+            if (state.value === '') {
+                showError(state, 'Please select a state');
+                valid = false;
+            } else {
+                hideError(state);
+            }
+
+            // Healthcare Type
+            const healthcareType = document.getElementById('healthcare_type');
+            if (healthcareType.value === '') {
+                showError(healthcareType, 'Please select a type of health care');
+                valid = false;
+            } else {
+                hideError(healthcareType);
+            }
+
+            // Section: Form Submission if Valid
+            if (valid) {
+                const formData = new FormData(registerForm); // Get form data
+                const data = Object.fromEntries(formData.entries()); // Convert to plain object
+
+                // Send form data to server via fetch
+                fetch('http://localhost:3000/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Registration failed');
+                    }
+                    return response.json(); // Parse response as JSON
+                })
+                .then(user => {
+                    console.log('User registered:', user); // Log successful registration
                 })
                 .catch(error => {
-                    console.error('Error:', error); // Log the error to the console
-                    alert('Error registering user.'); // Display an alert indicating there was an error registering the user
+                    console.error('Error:', error); // Log and handle registration error
                 });
+            }
         });
     }
 });
 
-// Hamburger Menu
+
+
+// Function to display error message for input field
+function showError(input, message) {
+    const formControl = input.parentElement;
+    formControl.classList.add('error');
+    formControl.querySelector('small').textContent = message;
+}
+
+// Function to hide error message for input field
+function hideError(input) {
+    const formControl = input.parentElement;
+    formControl.classList.remove('error');
+    formControl.querySelector('small').textContent = '';
+}
+
+
+// Hamburger menu
 const toggleBtn = document.querySelector('.toggle-btn');
 const toggleBtnIcon = document.querySelector('.toggle-btn i');
 const dropDownMenu= document.querySelector('.dropdown-menu');
@@ -75,6 +136,7 @@ toggleBtn.onclick = function () {
     : 'fa-solid fa-bars'
 };
 
+// Hero image shift effect
 var dropdownButton = document.querySelector('.toggle-btn');
 var heroImage = document.querySelector('.hero-image');
 

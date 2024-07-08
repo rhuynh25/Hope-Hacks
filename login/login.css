@@ -201,6 +201,19 @@ div {
     background-color: #005BB5;
 }
 
+.form-group.error {
+    position: relative;
+}
+
+.form-group.error small {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-size: .80rem;
+}
+
+
 
 
 /* Footer styles */
